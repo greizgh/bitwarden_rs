@@ -51,7 +51,7 @@ diesel_migrations = { version = "1.4.0", features = ["sqlite"] }
 libsqlite3-sys = { version = "0.12.0", features = ["bundled"] }
 
 # Crypto library
-ring = { version = "0.13.5", features = ["rsa_signing"] }
+ring = "0.14.6"
 
 # UUID generation
 uuid = { version = "0.7.2", features = ["v4"] }
@@ -66,10 +66,10 @@ oath = "0.10.2"
 data-encoding = "2.1.2"
 
 # JWT library
-jsonwebtoken = "5.0.1"
+jsonwebtoken = "6.0.0"
 
 # U2F library
-u2f = "0.1.4"
+u2f = "0.1.5"
 
 # Yubico Library
 yubico = { version = "0.5.1", features = ["online"], default-features = false }
@@ -102,6 +102,12 @@ regex = "1.1.2"
 [patch.crates-io]
 # Add support for Timestamp type
 rmp = { git = 'https://github.com/dani-garcia/msgpack-rust' }
+
+# Update to ring 0.14
+rocket = { git = 'https://github.com/dani-garcia/Rocket', rev = 'a9c9ee3b776b1' }
+rocket_contrib = { git = 'https://github.com/dani-garcia/Rocket', rev = 'a9c9ee3b776b1' }
+hyper-sync-rustls = { git = 'https://github.com/dani-garcia/hyper-sync-rustls', rev = 'b81f5c42339b4' }
+jsonwebtoken = { git = 'https://github.com/Keats/jsonwebtoken', rev = 'be27206088f0a' }
 
 # Use new native_tls version 0.2
 lettre = { git = 'https://github.com/lettre/lettre', rev = 'c988b1760ad81' }
